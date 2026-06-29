@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Past games - Chess</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <button id="themeBtn" class="theme-btn" onclick="cycleTheme()">◐ Auto</button>
+
+  <main class="page">
+    <div class="page-head">
+      <h1>Past games</h1>
+      <button id="back" class="btn" style="width:auto;">← Menu</button>
+    </div>
+    <div id="list" class="history-list">
+      <div class="empty-state">Loading…</div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/history.js"></script>
+</body>
+</html>

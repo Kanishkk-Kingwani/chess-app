@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knight &amp; Day - Chess</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <button id="themeBtn" class="theme-btn" onclick="cycleTheme()">◐ Auto</button>
+
+  <main class="menu">
+    <h1 class="brand">Knight&nbsp;<span class="accent">&amp;</span>&nbsp;Day</h1>
+    <p class="tagline">Two players, one board, one screen. Your game is saved as you go -
+      close the tab and pick up exactly where you left off.</p>
+
+    <div class="card">
+      <div class="field">
+        <label for="white">White player</label>
+        <input id="white" type="text" placeholder="White" maxlength="24" />
+      </div>
+      <div class="field">
+        <label for="black">Black player</label>
+        <input id="black" type="text" placeholder="Black" maxlength="24" />
+      </div>
+
+      <button id="start" class="btn btn-primary">Start new game</button>
+      <button id="continue" class="btn btn-ghost" style="display:none;">Continue last game</button>
+      <button id="history" class="btn btn-ghost">Past games</button>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

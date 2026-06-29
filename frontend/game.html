@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess - Game</title>
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet"
+        href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <button id="themeBtn" class="theme-btn" onclick="cycleTheme()">◐ Auto</button>
+
+  <div class="game-wrap">
+    <section class="board-col">
+      <div id="board"></div>
+      <div class="board-foot">Pick up a piece to see its legal moves. The board faces the side to move.</div>
+    </section>
+
+    <aside class="panel-col">
+      <div class="panel-head">
+        <div class="players">
+          <span class="player"><span class="dot white"></span><span id="whiteName">White</span></span>
+          <span class="player"><span id="blackName">Black</span><span class="dot black"></span></span>
+        </div>
+        <div id="turn" class="turn">White to move</div>
+
+        <div class="captures">
+          <div class="cap-row">
+            <span class="cap-name">White</span>
+            <span id="capWhite" class="cap-pieces"></span>
+            <span id="advWhite" class="cap-adv"></span>
+          </div>
+          <div class="cap-row">
+            <span class="cap-name">Black</span>
+            <span id="capBlack" class="cap-pieces"></span>
+            <span id="advBlack" class="cap-adv"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="moves" class="scoresheet"><div class="empty">No moves yet.</div></div>
+
+      <div class="panel-actions">
+        <button id="flip" class="btn">Flip board</button>
+        <button id="restart" class="btn">New game</button>
+        <button id="quit" class="btn btn-ghost full">Quit to menu</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- game-over overlay -->
+  <div id="overlay" class="overlay">
+    <div class="overlay-card">
+      <h2 id="ovTitle">Game over</h2>
+      <p id="ovSub"></p>
+      <button id="ovAnalyse" class="btn btn-primary">Review this game</button>
+      <button id="ovNew" class="btn">New game</button>
+      <button id="ovMenu" class="btn btn-ghost">Quit to menu</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
